@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="menu">
-                <div class="notify"><i class="fa-solid fa-bell" style="color: #ffffff;"></i></div>
+                <div class="notify"><a id="current_location"><em title="current location"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i></em></a></div>
                 <div class="notify"><i class="fa-solid fa-moon" style="color: #ffffff;"></i></div>
             </div>
         </nav>
@@ -80,7 +80,7 @@
                 <div class="dash_left">
                     <div class="dash_left_time">
                         <div class="dash_left_date">
-                            <h1 id="time"><span>PM</span></h1>
+                            <h1 id="time"><span></span></h1>
                             <h4 id="date"></h4>
                         </div>
                         <div class="dash_left_temp">
@@ -92,12 +92,12 @@
                     </div>
                     <div class="dash_left_image">
                         <div class="dash_image_img">
-                            <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                            <img class="weather_img"alt="">
                         </div>
                         <div class="dash_image_loc">
-                            <h3>Kearala, India</h3>
-                            <h4>lon: 10.99</h4>
-                            <h4>lat: 44.34</h4>
+                            <h3 id="weather_location"></h3>
+                            <h4 id="weather_lon"></h4>
+                            <h4 id="weather_lat"></h4>
                         </div>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                             <i class="fa-solid fa-temperature-high" style="color: #ffffff;"></i>
                             <h2>Temperature</h2>
                             <div class="icon">
-                                <span><i class="fa-sharp fa-solid fa-arrow-up" style="color: #fa0000;"></i><br>19</span>
-                                <span><i class="fa-sharp fa-solid fa-arrow-down" style="color: #005eff;"></i><br>29
+                                <span><i class="fa-sharp fa-solid fa-arrow-up" style="color: #fa0000;"></i><br><span id="max_temp"></span></span>
+                                <span><i class="fa-sharp fa-solid fa-arrow-down" style="color: #005eff;"></i><br><span id="min_temp"></span>
                             </div></span>
                         </div>
                     </div>
@@ -116,21 +116,22 @@
                         <div class="humidity">
                             <i class="fa-brands fa-cloudscale" style="color: #ffffff;"></i>
                             <h2>Pressure</h2>
-                            <h2>64</h2>
+                            <h2 id="pressure_value"></h2>
                         </div>
                     </div>
                     <div class="dash_right_in">
                         <div class="humidity">
                             <i class="fa-solid fa-wind" style="color: #ffffff;"></i>
                             <h2>Wind</h2>
-                            <h2>64</h2>
+                            <h2 id="wind_value">Wind</h2>
+                            <h2></h2>
                         </div>
                     </div>
                     <div class="dash_right_in">
                         <div class="humidity">
                             <i class="fa-solid fa-cloud-meatball" style="color: #ffffff;"></i>
                             <h2>Humidity</h2>
-                            <h2>64</h2>
+                            <h2 id="humidity_value"></h2>
                         </div>
                     </div>
                 </div>
@@ -140,19 +141,19 @@
                     <h2>Monday</h2>
                     <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
                     <h2>27&deg;C</h2>
-                    <h3>10 am</h3>
+                    <h3>9 am</h3>
                 </div>
                 <div class="dash_bottom_days">
                     <h2>Thuesday</h2>
                     <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
                     <h2>24&deg;C</h2>
-                    <h3>10 am</h3>
+                    <h3>8 am</h3>
                 </div>
                 <div class="dash_bottom_days">
                     <h2>Wednesday</h2>
                     <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
                     <h2>28&deg;C</h2>
-                    <h3>10 am</h3>
+                    <h3>9 am</h3>
                 </div>
                 <div class="dash_bottom_days">
                     <h2>Thursday</h2>
@@ -164,43 +165,44 @@
                     <h2>Friday</h2>
                     <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
                     <h2>23&deg;C</h2>
+                    <h3>8 am</h3>
                 </div>
                 <div class="dash_bottom_days">
                     <h2>Saturday</h2>
                     <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
                     <h2>24&deg;C</h2>
-                    <h3>10 am</h3>
+                    <h3>11 am</h3>
                 </div>
                 <div class="dash_bottom_days">
                     <h2>Sunday</h2>
                     <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
                     <h2>28&deg;C</h2>
-                    <h3>10 am</h3>
+                    <h3>9 am</h3>
                 </div>
             </div>
         </div>
         <div class="google_map">
             <div class="map">
-                <img src="https://i.ytimg.com/vi/TeET68DCqjE/maxresdefault.jpg" alt="">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.54005232218!2d77.04417211543775!3d28.5272527371879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1689268638120!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="location">
                 <div class="weather_data address">
-                    <h3>Location - </h3>
+                    <h3 id="location">Location - </h3>
                 </div>
                 <div class="weather_data lat">
-                    <h3>latitude&altitude- </h3>
+                    <h3 id="lat&lat"> </h3>
                 </div>
                 <div class="weather_data weather">
-                    <h3>Temperature - </h3>
+                    <h3 id="current_temp"> </h3>
                 </div>
                 <div class="weather_data press">
-                    <h3>Pressure - </h3>
+                    <h3 id="current_press" > </h3>
                 </div>
                 <div class="weather_data hum">
-                    <h3>Humidity - </h3>
+                    <h3 id="current_hum"> </h3>
                 </div>
                 <div class="weather_data Win">
-                    <h3>Wind - </h3>
+                    <h3 id="current_wind"> </h3>
                 </div>
             </div>
         </div>
