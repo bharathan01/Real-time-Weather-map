@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <div class="title">
+                <i class="fa-regular fa-snowflake" style="color: #ffffff;"></i>
+                <h2>Weather-Fi</h2>
+            </div>
+            <div class="serach">
+                <div class="search_content">
+                    <input type="text" name="search-text" id="search" placeholder="search..">
+                    <button id="search_btn"><i class="fa-solid fa-magnifying-glass"
+                            style="color: #000000;"></i></button>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="notify"><i class="fa-solid fa-bell" style="color: #ffffff;"></i></div>
+                <div class="notify"><i class="fa-solid fa-moon" style="color: #ffffff;"></i></div>
+            </div>
+        </nav>
+
+    </header>
+    <section>
+        <div class="aside" >
+            <a class="aside_a" id="open_menu"> 
+                <div class="aside_menu ">
+                    <button class="menu_btn"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></button>
+                    <div class="menu_text">Menu</div>
+                </div>
+            </a>
+            <a class="aside_a" id="home"> 
+                <div class="aside_menu ">
+                    <button class="menu_btn"><i class="fa-solid fa-house" style="color: #ffffff;"></i></button>
+                    <div class="menu_text">Menu</div>
+                </div>
+            </a>
+            <a class="aside_a" id="map">
+                <div class="aside_menu">
+                    <button class="menu_btn"><i class="fa-solid fa-map-location-dot"
+                            style="color: #ffffff;"></i></i></button>
+                    <div class="menu_text">Map</div>
+                </div>
+            </a>
+            <a class="aside_a">
+                <div class="aside_menu">
+                    <button class="menu_btn"><i class="fa-solid fa-bell" style="color: #ffffff;"></i></button>
+                    <div class="menu_text">Notification</div>
+                </div>
+            </a>
+
+            <a class="aside_a">
+                <div class="aside_menu">
+                    <button class="menu_btn"><i class="fa-solid fa-gear" style="color: #ffffff;"></i></button>
+                    <div class="menu_text">Setting</div>
+                </div>
+            </a>
+
+            <a class="aside_a">
+                <div class="aside_menu">
+                    <button class="menu_btn"><i class="fa-solid fa-sun" style="color: #ffffff;"></i></button>
+                    <div class="menu_text">Theam</div>
+                </div>
+            </a>
+
+        </div>
+        <div class="dash_bord">
+            <div class="dash_top">
+                <div class="dash_left">
+                    <div class="dash_left_time">
+                        <div class="dash_left_date">
+                            <h1 id="time"><span>PM</span></h1>
+                            <h4 id="date"></h4>
+                        </div>
+                        <div class="dash_left_temp">
+                            <h1 id="temperature"></h1>
+                            <h4 id="climet">moderate rain</h4>
+                            <h4 id="sun_rise"></h4>
+                            <h4 id="sun_set"></h4>
+                        </div>
+                    </div>
+                    <div class="dash_left_image">
+                        <div class="dash_image_img">
+                            <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                        </div>
+                        <div class="dash_image_loc">
+                            <h3>Kearala, India</h3>
+                            <h4>lon: 10.99</h4>
+                            <h4>lat: 44.34</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="dash_right">
+                    <div class="dash_right_in">
+                        <div class="temperature">
+                            <i class="fa-solid fa-temperature-high" style="color: #ffffff;"></i>
+                            <h2>Temperature</h2>
+                            <div class="icon">
+                                <span><i class="fa-sharp fa-solid fa-arrow-up" style="color: #fa0000;"></i><br>19</span>
+                                <span><i class="fa-sharp fa-solid fa-arrow-down" style="color: #005eff;"></i><br>29
+                            </div></span>
+                        </div>
+                    </div>
+                    <div class="dash_right_in">
+                        <div class="humidity">
+                            <i class="fa-brands fa-cloudscale" style="color: #ffffff;"></i>
+                            <h2>Pressure</h2>
+                            <h2>64</h2>
+                        </div>
+                    </div>
+                    <div class="dash_right_in">
+                        <div class="humidity">
+                            <i class="fa-solid fa-wind" style="color: #ffffff;"></i>
+                            <h2>Wind</h2>
+                            <h2>64</h2>
+                        </div>
+                    </div>
+                    <div class="dash_right_in">
+                        <div class="humidity">
+                            <i class="fa-solid fa-cloud-meatball" style="color: #ffffff;"></i>
+                            <h2>Humidity</h2>
+                            <h2>64</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dash_bottom">
+                <div class="dash_bottom_days">
+                    <h2>Monday</h2>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                    <h2>27&deg;C</h2>
+                    <h3>10 am</h3>
+                </div>
+                <div class="dash_bottom_days">
+                    <h2>Thuesday</h2>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                    <h2>24&deg;C</h2>
+                    <h3>10 am</h3>
+                </div>
+                <div class="dash_bottom_days">
+                    <h2>Wednesday</h2>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                    <h2>28&deg;C</h2>
+                    <h3>10 am</h3>
+                </div>
+                <div class="dash_bottom_days">
+                    <h2>Thursday</h2>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                    <h2>30&deg;C</h2>
+                    <h3>10 am</h3>
+                </div>
+                <div class="dash_bottom_days">
+                    <h2>Friday</h2>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                    <h2>23&deg;C</h2>
+                </div>
+                <div class="dash_bottom_days">
+                    <h2>Saturday</h2>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                    <h2>24&deg;C</h2>
+                    <h3>10 am</h3>
+                </div>
+                <div class="dash_bottom_days">
+                    <h2>Sunday</h2>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/23/weather-157114_640.png" alt="">
+                    <h2>28&deg;C</h2>
+                    <h3>10 am</h3>
+                </div>
+            </div>
+        </div>
+        <div class="google_map">
+            <div class="map">
+                <img src="https://i.ytimg.com/vi/TeET68DCqjE/maxresdefault.jpg" alt="">
+            </div>
+            <div class="location">
+                <div class="weather_data address">
+                    <h3>Location - </h3>
+                </div>
+                <div class="weather_data lat">
+                    <h3>latitude&altitude- </h3>
+                </div>
+                <div class="weather_data weather">
+                    <h3>Temperature - </h3>
+                </div>
+                <div class="weather_data press">
+                    <h3>Pressure - </h3>
+                </div>
+                <div class="weather_data hum">
+                    <h3>Humidity - </h3>
+                </div>
+                <div class="weather_data Win">
+                    <h3>Wind - </h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
